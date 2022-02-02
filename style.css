@@ -1,6 +1,5 @@
 @font-face {
-    font-family: 'Montserrat-Light';
-    src: local('Montserrat'), url(./static/fonts/Montserrat-Thin.ttf) format('truetype');
+    font-family: 'Montserrat';
     src: local('Montserrat-Light'), url(./static/fonts/Montserrat-Light.ttf) format('truetype');
     src: local('Montserrat-ExtraLight'), url(./static/fonts/Montserrat-ExtraLight.ttf) format('truetype');
     src: local('Montserrat-SemiBold'), url(./static/fonts/Montserrat-SemiBold.ttf) format('truetype');
@@ -273,6 +272,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .BlogCard {
@@ -281,9 +281,9 @@ p {
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    width: 356px;
-    height: 396px;
-    padding: 50px;
+    margin-top: 20px;
+    width: 20vw;
+    height: 40vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
