@@ -88,9 +88,10 @@ p {
     margin-top: 50px;
     z-index: 1000;
     height: 100px;
-    background: linear-gradient(0.25turn, #010B33, #12101B);
+    background: linear-gradient(0.25turn, rgb(1, 11, 51), rgba(18, 16, 27, 0.815));
     display: flex;
     justify-content: space-between;
+    backdrop-filter: blur(20px);
 }
 
 .Links {
