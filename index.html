@@ -1,58 +1,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="./favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css"/>
-
+    <link rel="canonical" href="https://cybernades.com/">
     <title>Cybernades</title>
     <meta
       name="description"
-      content="Cyber attacks prevention system"
+      content="Find protection from the most active cyber security threats"
     />
 </head>
 <body id="Home">
     <div class="Menu">
         <div>
             <a href="#Home" style="opacity: 1;">
-                <img src="./CybernadesLogo.png" alt="Cybernades Logo" 
+                <img src="./Static/CybernadesLogo.png" alt="Cybernades Logo" 
                     style="width: 263px; margin-left: 140px;">
             </a>
         </div>
         <div class="Links">
-            <a href="#Home">Home</a>
-            <a href="#Solutions">Solutions</a>
-            <a href="#AboutUs">About Us</a>
-            <a href="#Blog">Blog</a>
-            <a href="#Contact">Contact</a>
+            <a id="homelink" class="NavLink" href="#Home" 
+            style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">
+                Home
+            </a>
+            <a id="sollink" class="NavLink" href="#Solutions">Solutions</a>
+            <a id="aboutlink" class="NavLink" href="#AboutUs">About Us</a>
+            <a id="bloglink" class="NavLink" href="#Blog">Blog</a>
+            <a id="contactlink" class="NavLink" href="#Contact">Contact</a>
         </div>
     </div>
     <div class="Section Landing">
         <div class="LandingText">
-            <h1>Protect your enterprise<br> with the latest technologies</h1>
+            <h1>Protect your enterprise<br>with the latest technologies</h1>
             <p>Providing modern cyber security tools against the most volatile threats<br>
-                that are simple to use and battle-tested by industry specialists</p>
+                that are simple to use and battle-tested by industry specialists
+            </p>
             <div>
-                <button class="SubmitBtn">Get a demo</button>
+                <button class="SubmitBtn" onclick="window.location.href='#Contact';">Get a demo</button>
+                <button class="MoreBtn" onclick="window.location.href='#Solutions';">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div id="Solutions" class="Section SectionContainer">
+        <h2>Solutions</h2>
+        <div class="Bar"></div>
+        <h3>There are two main components<br>to our security pipeline</h3>
+        <div class="ProductsContainer">
+            <div class="ProductCard">
+                <img src="./Static/PhalanxLogo.png" alt="Phalanx Logo"
+                    style="width: 68px;">
+                <img src="./Static/PhalanxTxt.png" alt="Phalanx Text"
+                    style="width: 266px; margin-top: -10px;">
+                <p class="ProductSubTitle">Intrusion Prevention System (IPS)</p>
+                <p>Gather the most recent threats and prevent them before the attack. 
+                    See statisticsabout the most common type of threats and manageyour 
+                    own blacklists and whitelists
+                </p>
+                <button class="ProductBtn" onclick="window.location.href='./phalanx.html';">Read more</button>
+            </div>
+            <div class="ProductCard">
+                <img src="./Static/LegionLogo.png" alt="Legion Logo"
+                    style="width: 68px; margin-top: 20px;">
+                <img src="./Static/LegionTxt.png" alt="Legion Text"
+                    style="width: 196px; margin-top: 20px;">
+                <p class="ProductSubTitle2">Intrusion Detection System (IDS)</p>
+                <p class="Soon">Coming soon!</p>
+            </div>
+        </div>
+    </div>
+    <div id="AboutUs" class="Section SectionContainer">
+        <h2>About Us</h2>
+        <div class="Bar"></div>
+        <div class="ProductsContainer">
+            <div style="width: 25vw; margin: 50px">
+                <h3 style="text-align: left">
+                    <b>Cybernades</b>, the most modern cyber security solutions provider, 
+                    delivers adaptive cutting-edge threat prevention and detection. 
+                    We are dedicated to assure enterprises or small-businesses 
+                    convenient data protection and help them to keep their people safe. 
+                </h3>
+                <div class="Facts">
+                    <div class="Fact">
+                        <h2>306+</h2>
+                        <b>Threats/week<br>blocked</b>
+                    </div>
+                    <div class="Fact">
+                        <h2>100k+</h2>
+                        <b>IP analysis<br>capacity</b>
+                    </div>
+                    <div class="Fact">
+                        <h2>24TB+</h2>
+                        <b>Data<br>protected</b>
+                    </div>
+                </div>
+            </div>
+            <img src="./Static/AboutUsBG.png" alt="About us"
+                style="width: 30vw; margin: 50px; margin-right: -10px; margin-top: 70px;">
+        </div>
+        
+    </div>
+    <div id="Blog" class="Section SectionContainer">
+        <h2>Blog</h2>
+        <div class="Bar"></div>
+        <h3>News about our latest work</h3>
+        <div class="Carosel">
+            <div class="BlogCard" style="background-image: url(./Static/CrimeVis.png);">
+                <h2 style="margin: 30px;">Visualisations<br> of crime in Manchester</h2>
+                <button class="MoreBtn">Learn More</button>
+            </div>
+            <div class="BlogCard" style="background-image: url(./Static/Log4j.png);">
+                <h2 style="margin: 30px;">Log4j<br> worldwide vulnerability</h2>
+                <button class="MoreBtn">Learn More</button>
+            </div>
+            <div class="BlogCard" style="background-image: url(./Static/Update.png);">
+                <h2 style="margin: 30px;">New Phalanx version 1.5 update</h2>
                 <button class="MoreBtn">Learn More</button>
             </div>
         </div>
     </div>
-    <div id="Solutions" class="Section Solutions">
-        Solutions
-    </div>
-    <div id="AboutUs" class="Section AboutUs">
-        About Us
-    </div>
-    <div id="Blog" class="Section Blog">
-        Solutions
-    </div>
-    <div id="Contact" class="Section Request">
-        Solutions
+    <div id="Contact" class="Section SectionContainer">
+        <h2>Request a Demo</h2>
+        <div class="Bar"></div>
+        <h3>Find out how we can help to protect you<br>from most active threats</h3>
+        <form id="RequestForm" class="ContactForm" action="https://formsubmit.co/cybernades@gmail.com" method="POST">
+            <input placeholder="Name" type="text" name="full-name" required>
+            <input placeholder="Email" type="email" name="email" required>
+            <textarea placeholder="Message..." name="message" required></textarea>
+            <input type="hidden" name="_subject" value="Website message">        
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://cybernades.com/index.html#Contact">
+            <button class="SubmitBtn" type="submit">Submit</button>
+        </form>
     </div>
     <div class="Footer">
-        Solutions
+        <div class="FooterLinks">
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Solutions</p>
+                <a class="LinkName" href="./phalanx.html">Phalanx</a>
+                <a class="LinkName" href="#Solutions">Legion</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Legal</p>
+                <a class="LinkName" href="./privacy.html">Privacy</a>
+                <a class="LinkName" href="./terms.html">Terms & Conditions</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">About Us</p>
+                <a class="LinkName" href="#AboutUs">Our Team</a>
+                <a class="LinkName" href="#Contact">Careers</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Social Media</p>
+                <a class="LinkName" href="https://www.linkedin.com">LinkedIn</a>
+                <a class="LinkName" href="https://www.facebook.com">Facebook</a>
+            </div>
+        </div>
+        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
     </div>
+    <script>
+        let NavLinks = document.querySelectorAll(".NavLink");
+        let Sections = document.querySelectorAll(".Section");
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY - 50;
+
+            NavLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+
+                if (section.offsetTop <= fromTop + 450 &&
+                section.offsetTop + section.offsetHeight > fromTop + 450) {
+                    NavLinks.forEach(element => {
+                        if (element !== link) {
+                            element.style.color = "white";
+                            element.style.opacity = 0.61;
+                            element.style.textShadow = "none";
+                        }
+                    })
+                    link.style.color = "#0FFEC8";
+                    link.style.opacity = 1;
+                    link.style.textShadow = "0px 1px 5px rgba(20, 253, 200, 0.93)";
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
