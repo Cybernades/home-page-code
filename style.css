@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: local('Montserrat'), url(./static/fonts/Montserrat-Thin.ttf) format('truetype');
+    src: local('Montserrat-Light'), url(./static/fonts/Montserrat-Light.ttf) format('truetype');
+    src: local('Montserrat-ExtraLight'), url(./static/fonts/Montserrat-ExtraLight.ttf) format('truetype');
+    src: local('Montserrat-SemiBold'), url(./static/fonts/Montserrat-SemiBold.ttf) format('truetype');
+    src: local('Montserrat-Thin'), url(./static/fonts/Montserrat-Thin.ttf) format('truetype');
+    src: local('Montserrat-Regular'), url(./static/fonts/Montserrat-Reqular.ttf) format('truetype');
+    src: local('Montserrat-Medium'), url(./static/fonts/Montserrat-Medium.ttf) format('truetype');
+}
+
 html, body {
     background: linear-gradient(0.25turn, #010B33, #12101B);
     padding: 0;
