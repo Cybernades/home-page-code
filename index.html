@@ -16,7 +16,6 @@
     />
 </head>
 <body id="Home">
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <div class="Menu">
         <div>
             <a href="#Home" style="opacity: 1;">
@@ -42,8 +41,8 @@
                 that are simple to use and battle-tested by industry specialists
             </p>
             <div>
-                <button class="SubmitBtn" onclick="window.location.href='#Contact';">Get a demo</button>
-                <button class="MoreBtn" onclick="window.location.href='#Solutions';">Learn More</button>
+                <a href="#Contact" style="opacity: 1; margin: 0;"><button class="SubmitBtn">Get a demo</button></a>
+                <a href="#Solutions" style="opacity: 1; margin: 0;"><button class="MoreBtn">Learn More</button></a>
             </div>
         </div>
     </div>
@@ -187,6 +186,23 @@
                     link.style.textShadow = "0px 1px 5px rgba(20, 253, 200, 0.93)";
                 } else {
                     link.classList.remove("current");
+                }
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+            $("a").on('click', function(event) {        
+                if (this.hash !== "") {
+                    event.preventDefault();            
+                    var hash = this.hash;            
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){            
+                        window.location.hash = hash;
+                    });
                 }
             });
         });
