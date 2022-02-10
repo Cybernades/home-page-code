@@ -50,6 +50,7 @@ h2 {
     font-size: 2rem;
     letter-spacing: 0px;
     line-height: 1.4;
+    margin-top: 10px;
 }
 
 h3 {
@@ -93,6 +94,11 @@ p {
     backdrop-filter: blur(15px);
 }
 
+.Logo {
+    width: 263px; 
+    margin-left: 140px;
+}
+
 .Links {
     display: inline;
     margin-top: 40px;
@@ -101,13 +107,14 @@ p {
 
 .Section {
     height: 100vh;
+    min-height: 1000px;
 }
 
 .Landing {
     background-color: rgb(18, 18, 18);
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     background-color: transparent;
     background-image: url("./Static/bg.png");
     background-size: cover;
@@ -119,7 +126,9 @@ p {
 
 .LandingText {
     margin-left: 15%;
-    margin-top: -20%;
+    margin-right: 15%;
+    margin-bottom: 25%;
+    margin-top: 10%;
 }
 
 .SubmitBtn {
@@ -148,7 +157,7 @@ p {
 .MoreBtn {
     margin: 16px;
     width: 147px;
-    height: 39px;
+    min-height: 39px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.42);
     background-color: transparent;
@@ -181,13 +190,17 @@ p {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .ProductCard {
     width: 22vw;
+    min-width: 250px;
     height: 40vh;
+    min-height: 440px;
     margin: 30px;
     margin-top: 0;
+    margin-bottom: 50px;
     padding: 80px;
     box-shadow: 0px -10px 33px 0px rgba(0, 0, 0, 0.5);
     background: linear-gradient(302deg, #12101b 0%, #010b33 100%);
@@ -196,8 +209,18 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
+}
+
+.PhalanxT {
+    width: 266px;
+    margin-top: -10px;
+}
+
+.LegionT {
+    width: 196px;
+    margin-top: 20px;
 }
 
 .ProductSubTitle {
@@ -226,8 +249,9 @@ p {
 
 .ProductBtn {
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 147px;
-    height: 39px;
+    min-height: 39px;
     box-shadow: 0px 0px 11px 0px #ff4400;
     background-color: #ff4400;
     border-radius: 4px;
@@ -249,7 +273,8 @@ p {
 }
 
 .Soon {
-    margin-top: 180px;
+    margin-top: 18vh;
+    margin-bottom: 30px;
     opacity: 0.66;
     font-weight: 600;
     font-style: normal;
@@ -257,6 +282,31 @@ p {
     font-size: 20px;
     letter-spacing: 0px;
     line-height: 1.2;
+}
+
+.AboutContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AboutText {
+    width: 25vw; 
+    margin: 50px;
+}
+
+.AboutDescribtion {
+    text-align: left;
+}
+
+.AboutImg {
+    width: 30vw;
+    max-width: 510px;
+    margin: 50px; 
+    margin-right: -10px; 
+    margin-top: 70px;
 }
 
 .Carosel {
@@ -272,10 +322,12 @@ p {
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    margin-top: 20px;
+    margin: 20px;
     width: 20vw;
+    min-width: 300px;
     height: 40vh;
-    background-size: cover;
+    border-radius: 25px;
+    background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -289,6 +341,7 @@ p {
 
 input {
     width: 40vw;
+    min-width: 320px;
     height: 58px;
     border-top-style: hidden;
     border-right-style: hidden;
@@ -316,6 +369,7 @@ input:focus, input:active{
 
 textarea {
     width: 40vw;
+    min-width: 320px;
     height: 20vh;
     border-top-style: hidden;
     border-right-style: hidden;
@@ -363,12 +417,14 @@ textarea:focus, textarea:active{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .FooterLinks {
     margin: 50px;
-    margin-bottom: 130px;
-    width: 60vw;
+    margin-bottom: 5%;
+    width: 90vw;
+    max-width: 1200px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -405,6 +461,125 @@ textarea:focus, textarea:active{
     font-style: normal;
     color: #ffffff;
     font-size: 15px;
+    opacity: 0.6;
     letter-spacing: 0px;
     line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1535px) {
+    .AboutText {
+        width: 80%;
+        margin: 20px;
+        text-align: center;
+    }
+    .AboutContainer {
+        flex-direction: column;
+    }
+    .AboutImg {
+        width: 50vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    .Logo {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1139px) {
+    #Solutions {
+        min-height: 1500px;
+    }
+}
+
+@media (max-width: 1105px) {
+    .ProductCard {
+        width: 15vw; 
+    }
+    .Links {
+        display: none; 
+    }
+}
+
+@media (max-width: 850px) {
+    .FooterLinks {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    .FooterLinkGroup {
+        align-items: center;
+    }
+    .Footer {
+        min-height: 800px;
+    }
+}
+
+@media (max-width: 779px) {
+    #Blog {
+        min-height: 1600px;
+    }
+    .BlogCard {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .Logo {
+        width: 180px;
+    }
+    .LandingBtnsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+    }
+    .Copyright {
+        font-size: 0.6rem;
+    }
+    .LandingText {
+        text-align: center;
+    }
+    .ProductCard {
+        padding: 30px;
+        min-height: 380px;
+    }
+    .PhalanxT {
+        width: 166px;
+    }
+    .LegionT {
+        width: 130px;
+    }
+    .Soon {
+        font-size: 0.8rem;
+    }
+    .AboutDescribtion {
+        font-size: 1rem;
+    }
+    .Facts {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Fact {
+        align-items: center;
+        margin-top: 50px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 1.9rem;
+        margin-bottom: 10%;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    h3 {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    p {
+        font-size: 0.8rem;
+    }
 }
