@@ -23,14 +23,31 @@
             </a>
         </div>
         <div class="Links">
-            <a id="homelink" class="NavLink" href="#Home" 
-            style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">
-                Home
-            </a>
-            <a id="sollink" class="NavLink" href="#Solutions">Solutions</a>
-            <a id="aboutlink" class="NavLink" href="#AboutUs">About Us</a>
-            <a id="bloglink" class="NavLink" href="#Blog">Blog</a>
-            <a id="contactlink" class="NavLink" href="#Contact">Contact</a>
+            <div id="Regular">
+                <a id="homelink" class="NavLink" href="#Home" 
+                style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">
+                    Home
+                </a>
+                <a id="sollink" class="NavLink" href="#Solutions">Solutions</a>
+                <a id="aboutlink" class="NavLink" href="#AboutUs">About Us</a>
+                <a id="bloglink" class="NavLink" href="#Blog">Blog</a>
+                <a id="contactlink" class="NavLink" href="#Contact">Contact</a>
+            </div>
+            <div id="Hidden" style="display: none;">
+                <a id="homelink" class="NavLink" href="#Home" onclick="showMenu()"
+                style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">
+                    Home
+                </a>
+                <a id="sollink" class="NavLink" href="#Solutions" onclick="showMenu()">Solutions</a>
+                <a id="aboutlink" class="NavLink" href="#AboutUs" onclick="showMenu()">About Us</a>
+                <a id="bloglink" class="NavLink" href="#Blog" onclick="showMenu()">Blog</a>
+                <a id="contactlink" class="NavLink" href="#Contact" onclick="showMenu()">Contact</a>
+            </div>
+            <div class="MobileMenu">
+                <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                    <img id="MenuIcon" src="./Static/menuIcon.png" style="width: 25px; opacity: 0.8;"></img>
+                </a>
+            </div>
         </div>
     </div>
     <div class="Section Landing">
@@ -158,6 +175,21 @@
         </div>
         <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
     </div>
+    <script>
+        const showMenu = () => {
+            let menu = document.getElementById("Hidden");
+            let icon = document.getElementById("MenuIcon");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                icon.src = "./Static/menuIcon.png";
+                icon.style.width = "30px";
+            } else {
+                menu.style.display = "flex";
+                icon.src = "./Static/closeIcon.png";
+                icon.style.width = "25";
+            }
+        }
+    </script>
     <script>
         let NavLinks = document.querySelectorAll(".NavLink");
         let Sections = document.querySelectorAll(".Section");

@@ -99,10 +99,37 @@ p {
     margin-left: 140px;
 }
 
+#Regular {
+    display: inline;
+}
+
+#MenuIcon:hover {
+    opacity: 1;
+}
+
+#Hidden {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 80px;
+    background: linear-gradient(0.25turn, rgba(1, 11, 51, 0.98), rgba(18, 16, 27, 0.98));
+    width: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
 .Links {
     display: inline;
     margin-top: 40px;
     margin-right: 160px;
+}
+
+.MobileMenu {
+    display: none;
+    margin-top: -4px;
 }
 
 .Section {
@@ -483,12 +510,6 @@ textarea:focus, textarea:active{
     }
 }
 
-@media (max-width: 1150px) {
-    .Logo {
-        margin-left: 5%;
-    }
-}
-
 @media (max-width: 1139px) {
     #Solutions {
         min-height: 1500px;
@@ -499,8 +520,17 @@ textarea:focus, textarea:active{
     .ProductCard {
         width: 15vw; 
     }
-    .Links {
+    #Regular {
         display: none; 
+    }
+    .Logo {
+        margin-left: 15%;
+    }
+    .MobileMenu {
+        display: block;
+    }
+    .Links {
+        margin-right: 10%;
     }
 }
 
@@ -530,6 +560,14 @@ textarea:focus, textarea:active{
 @media (max-width: 500px) {
     .Logo {
         width: 180px;
+        margin-top: 6px;
+        margin-left: 12%;
+    }
+    .Menu {
+        height: 80px;
+    }
+    .MobileMenu {
+        margin-top: -15px;
     }
     .LandingBtnsContainer {
         display: flex;
