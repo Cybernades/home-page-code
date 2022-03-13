@@ -18,6 +18,18 @@
       content="Find protection from the most active cyber security threats"
     />
 </head>
+<script src="js/bot-detector.js"></script>
+<script type="text/javascript" language="javascript">
+	let botDetector = new BotDetector({
+		timeout: 1000,
+		callback: function(result) {
+            if (result.isBot) {
+                document.getElementById("Home").parentNode.removeChild(elem);
+                alert("Access denied! Error 666: Bot detected");
+            }
+        }
+	});
+</script>
 <body id="Home">
     <div class="Menu">
         <div>
@@ -37,14 +49,14 @@
                 <a id="contactlink" class="NavLink" href="#Contact">Contact</a>
             </div>
             <div id="Hidden" style="display: none;">
-                <a id="homelink" class="NavLink" href="#Home" onclick="showMenu()"
+                <a id="homelink" class="NavLinkMobile" href="#Home" onclick="showMenu()"
                 style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">
                     Home
                 </a>
-                <a id="sollink" class="NavLink" href="#Solutions" onclick="showMenu()">Solutions</a>
-                <a id="aboutlink" class="NavLink" href="#AboutUs" onclick="showMenu()">About Us</a>
-                <a id="bloglink" class="NavLink" href="#Blog" onclick="showMenu()">Blog</a>
-                <a id="contactlink" class="NavLink" href="#Contact" onclick="showMenu()">Contact</a>
+                <a id="sollink" class="NavLinkMobile" href="#Solutions" onclick="showMenu()">Solutions</a>
+                <a id="aboutlink" class="NavLinkMobile" href="#AboutUs" onclick="showMenu()">About Us</a>
+                <a id="bloglink" class="NavLinkMobile" href="#Blog" onclick="showMenu()">Blog</a>
+                <a id="contactlink" class="NavLinkMobile" href="#Contact" onclick="showMenu()">Contact</a>
             </div>
             <div class="MobileMenu">
                 <a href="javascript:void(0);" class="icon" onclick="showMenu()">
@@ -56,7 +68,7 @@
         </div>
     </div>
     <div class="Section Landing">
-        <div class="LandingText">
+        <div id="RevealFirst" class="LandingText Reveal" style="display: none;">
             <h1>Protect your enterprise<br>with the latest technologies</h1>
             <p>Providing modern cyber security tools against the most volatile threats<br>
                 that are simple to use and battle-tested by industry specialists
@@ -68,10 +80,10 @@
         </div>
     </div>
     <div id="Solutions" class="Section SectionContainer">
-        <h2>Solutions</h2>
-        <div class="Bar"></div>
-        <h3>There are two main components<br>to our security pipeline</h3>
-        <div class="ProductsContainer">
+        <h2 class="Reveal">Solutions</h2>
+        <div class="Bar Reveal"></div>
+        <h3 class="Reveal">There are two main components<br>to our security pipeline</h3>
+        <div class="ProductsContainer Reveal">
             <div class="ProductCard">
                 <img class="PhalanxL" src="./Static/PhalanxLogo.png" alt="Phalanx Logo"
                     style="width: 68px;">
@@ -93,9 +105,9 @@
         </div>
     </div>
     <div id="AboutUs" class="Section SectionContainer">
-        <h2>About Us</h2>
-        <div class="Bar"></div>
-        <div class="AboutContainer">
+        <h2 class="Reveal">About Us</h2>
+        <div class="Bar Reveal"></div>
+        <div class="AboutContainer Reveal">
             <div class="AboutText">
                 <h3 class="AboutDescribtion">
                     <b>Cybernades</b>, the most modern cyber security solutions provider, 
@@ -123,10 +135,10 @@
         
     </div>
     <div id="Blog" class="Section SectionContainer">
-        <h2>Blog</h2>
-        <div class="Bar"></div>
-        <h3>News about our latest work</h3>
-        <div class="Carosel">
+        <h2 class="Reveal">Blog</h2>
+        <div class="Bar Reveal"></div>
+        <h3 class="Reveal">News about our latest work</h3>
+        <div class="Carosel Reveal">
             <div class="BlogCard" style="background-image: url(./Static/CrimeVis.png);">
                 <h2 style="margin: 60px;">Visualisations<br> of crime in Manchester</h2>
                 <button class="MoreBtn" style="margin-bottom: 60px;">Learn More</button>
@@ -142,10 +154,10 @@
         </div>
     </div>
     <div id="Contact" class="Section SectionContainer">
-        <h2>Request a Demo</h2>
-        <div class="Bar"></div>
-        <h3>Find out how we can help to protect you<br>from most active threats</h3>
-        <form id="RequestForm" class="ContactForm" action="https://formsubmit.co/cybernades@gmail.com" method="POST">
+        <h2 class="Reveal">Request a Demo</h2>
+        <div class="Bar Reveal"></div>
+        <h3 class="Reveal">Find out how we can help to protect you<br>from most active threats</h3>
+        <form id="RequestForm" class="ContactForm Reveal" action="https://formsubmit.co/cybernades@gmail.com" method="POST">
             <input placeholder="Name" type="text" name="full-name" required>
             <input placeholder="Email" type="email" name="email" required>
             <textarea placeholder="Message..." name="message" required></textarea>
@@ -181,7 +193,11 @@
         <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
     </div>
     <script>
-        const showMenu = () => {
+        function showMenu(){
+            // Initialize scroll event to detect if mobile menu is used and change menu color
+            window.scrollBy(0, 1);
+            window.scrollBy(0, -1);
+
             let menu = document.getElementById("Hidden");
             let icon = document.getElementById("MenuIcon");
             if (menu.style.display === "flex") {
@@ -196,10 +212,30 @@
         }
     </script>
     <script>
+        // Reveal the landing page text and buttons without scrolling
+        let revealF = document.getElementById("RevealFirst");
+        revealF.style.display = "block";
+        setTimeout(function() {  
+            revealF.classList.add("Active");
+        }, 300);
+        
+        
+    </script>
+    <script>
         let NavLinks = document.querySelectorAll(".NavLink");
+        
         let Sections = document.querySelectorAll(".Section");
 
         window.addEventListener("scroll", event => {
+            let mobileMenu = document.getElementById("Hidden");
+
+            if (document.getElementById("Hidden").style.display === "flex") {
+                NavLinks = document.querySelectorAll(".NavLinkMobile");
+            }
+            else {
+                NavLinks = document.querySelectorAll(".NavLink");
+            }
+
             let fromTop = window.scrollY - 50;
 
             NavLinks.forEach(link => {
@@ -221,6 +257,21 @@
                     link.classList.remove("current");
                 }
             });
+
+            
+            var reveals = document.querySelectorAll(".Reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("Active");
+                } else {
+                reveals[i].classList.remove("Active");
+                }
+            }
         });
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -233,7 +284,7 @@
                     var hash = this.hash;            
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function(){            
+                    }, 1800, function(){            
                         window.location.hash = hash;
                     });
                 }
