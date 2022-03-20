@@ -10,15 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <link rel="stylesheet" type="text/css" href="./Styles/style.css"/>
     <link rel="canonical" href="https://cybernades.com/">
+    <script src="./Scripts/mobileMenu.js"></script>
+    <script src="./Scripts/bot-detector.js"></script>
     <title>Cybernades</title>
     <meta
       name="description"
       content="Find protection from the most active cyber security threats"
     />
 </head>
-<script src="js/bot-detector.js"></script>
+
 <script type="text/javascript" language="javascript">
 	let botDetector = new BotDetector({
 		timeout: 1000,
@@ -80,7 +82,7 @@
         </div>
     </div>
     <div id="Solutions" class="Section SectionContainer">
-        <h2 class="Reveal">Solutions</h2>
+        <h2 class="Reveal FirstTitle">Solutions</h2>
         <div class="Bar Reveal"></div>
         <h3 class="Reveal">There are two main components<br>to our security pipeline</h3>
         <div class="ProductsContainer Reveal">
@@ -141,15 +143,24 @@
         <div class="Carosel Reveal">
             <div class="BlogCard" style="background-image: url(./Static/CrimeVis.png);">
                 <h2 style="margin: 60px;">Visualisations<br> of crime in Manchester</h2>
-                <button class="MoreBtn" style="margin-bottom: 60px;">Learn More</button>
+                <button class="MoreBtn" style="margin-bottom: 60px;"
+                onclick="window.location.href='./blog/ManchesterCrime.html';">
+                    Learn More
+                </button>
             </div>
             <div class="BlogCard" style="background-image: url(./Static/Log4j.png);">
                 <h2 style="margin: 60px;">Log4j<br> worldwide vulnerability</h2>
-                <button class="MoreBtn" style="margin-bottom: 60px;">Learn More</button>
+                <button class="MoreBtn" style="margin-bottom: 60px;" 
+                 onclick="window.location.href='./blog/log4j.html';">
+                    Learn More
+                </button>
             </div>
             <div class="BlogCard" style="background-image: url(./Static/Update.png);">
                 <h2 style="margin: 60px;">New Phalanx version 1.5 update</h2>
-                <button class="MoreBtn" style="margin-bottom: 60px;">Learn More</button>
+                <button class="MoreBtn" style="margin-bottom: 60px;" 
+                 onclick="window.location.href='./blog/update15.html';">
+                    Learn More
+                </button>
             </div>
         </div>
     </div>
@@ -194,33 +205,12 @@
         <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
     </div>
     <script>
-        function showMenu(){
-            // Initialize scroll event to detect if mobile menu is used and change menu color
-            window.scrollBy(0, 1);
-            window.scrollBy(0, -1);
-
-            let menu = document.getElementById("Hidden");
-            let icon = document.getElementById("MenuIcon");
-            if (menu.style.display === "flex") {
-                menu.style.display = "none";
-                icon.src = "./Static/menuIcon.png";
-                icon.style.width = "30px";
-            } else {
-                menu.style.display = "flex";
-                icon.src = "./Static/closeIcon.png";
-                icon.style.width = "25";
-            }
-        }
-    </script>
-    <script>
         // Reveal the landing page text and buttons without scrolling
         let revealF = document.getElementById("RevealFirst");
         revealF.style.display = "block";
         setTimeout(function() {  
             revealF.classList.add("Active");
         }, 300);
-        
-        
     </script>
     <script>
         let NavLinks = document.querySelectorAll(".NavLink");

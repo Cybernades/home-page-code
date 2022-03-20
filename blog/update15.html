@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="black-translucent"  media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../Styles/blogStyle.css"/>
+    <link rel="canonical" href="https://cybernades.com/">
+    <script src="../Scripts/mobileMenu.js"></script>
+    <title>Update 1.5</title>
+</head>
+<body>
+    <div class="Menu" style="margin-top: -50px;">
+        <div>
+            <a href="https://www.cybernades.com/index.html#Home" style="opacity: 1;">
+                <img class="Logo" src="../Static/CybernadesLogo.png" alt="Cybernades Logo">
+            </a>
+        </div>
+        <div class="Links">
+            <div id="Regular">
+                <a id="homelink" class="NavLink" href="https://www.cybernades.com/index.html#Home">Home</a>
+                <a id="sollink" class="NavLink" href="https://www.cybernades.com/index.html#Solutions">Solutions</a>
+                <a id="aboutlink" class="NavLink" href="https://www.cybernades.com/index.html#AboutUs">About Us</a>
+                <a id="bloglink" class="NavLink" href="https://www.cybernades.com/index.html#Blog"
+                   style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">Blog</a>
+                <a id="contactlink" class="NavLink" href="https://www.cybernades.com/index.html#Contact">Contact</a>
+            </div>
+            <div id="Hidden" style="display: none;">
+                <a id="homelink" class="NavLinkMobile" href="#Home" onclick="showMenu()">Home</a>
+                <a id="sollink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Solutions" onclick="showMenu()">Solutions</a>
+                <a id="aboutlink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#AboutUs" onclick="showMenu()">About Us</a>
+                <a id="bloglink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Blog" 
+                   style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)" onclick="showMenu()">Blog</a>
+                <a id="contactlink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Contact" onclick="showMenu()">Contact</a>
+            </div>
+            <div class="MobileMenu">
+                <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                    <img id="MenuIcon" src="../Static/menuIcon.png" style="width: 25px; opacity: 0.8;"
+                        alt="Menu Icon">
+                    </img>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="BlogHeading" style="background-image: url(../Static/Update.png);">
+        <h1>Phalanx v1.5 update</h1>
+        <div class="Bar"></div>
+    </div>
+    <div class="BlogTextContainer">
+        <div class="BlogText">
+            <p class="ArticleDate">26.11.2021</p>
+            <h2 class="SubTitle">
+                We are announcing a new update that brings many bug fixes and useful features.<br>
+            </h2>
+        </div>
+        <h3 class="BlogText">
+            <b>Bug fixes:</b><br>
+            <br>
+            <ul>
+                <li>Better responsivness</li><br>
+                <li>Larger numbers now fit more nicely on the statistics dashboard</li><br>
+                <li>Server saved list now updates right away when change made in the database</li><br>
+            </ul>
+            <br>
+            <b>New features</b><br>
+            <br>
+            <ul>
+                <li>Nicer confirmation popup for clearing the data and IP address deletion</li><br>
+                <li>New smooth loading bar for better user experience</li>
+            </ul>
+        </h3>
+    </div>
+    <div class="Footer">
+        <div class="FooterLinks">
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Solutions</p>
+                <a class="LinkName" href="https://www.cybernades.com/phalanx.html">Phalanx</a>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#Solutions">Legion</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Legal</p>
+                <a class="LinkName" href="https://www.cybernades.com/privacy.html">Privacy</a>
+                <a class="LinkName" href="https://www.cybernades.com/terms.html">Terms & Conditions</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">About Us</p>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#AboutUs">Our Team</a>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#Contact">Careers</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Social Media</p>
+                <a class="LinkName" href="https://www.linkedin.com">LinkedIn</a>
+                <a class="LinkName" href="https://www.facebook.com">Facebook</a>
+            </div>
+        </div>
+        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
+    </div>
+</body>
+</html>

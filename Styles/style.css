@@ -143,7 +143,7 @@ p {
     justify-content: flex-start;
     align-items: flex-start;
     background-color: transparent;
-    background-image: url("./Static/bg.png");
+    background-image: url("../Static/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -210,6 +210,14 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#Solutions {
+    min-height: 1013px;
+}
+
+.FirstTitle {
+    margin-top: 120px;
 }
 
 .ProductsContainer {
@@ -300,7 +308,7 @@ p {
 }
 
 .Soon {
-    margin-top: 18vh;
+    margin-top: 17vh;
     margin-bottom: 30px;
     opacity: 0.66;
     font-weight: 600;
@@ -309,6 +317,10 @@ p {
     font-size: 20px;
     letter-spacing: 0px;
     line-height: 1.2;
+}
+
+#AboutUs {
+    height: 80vh;
 }
 
 .AboutContainer {
@@ -334,6 +346,10 @@ p {
     margin: 50px; 
     margin-right: -10px; 
     margin-top: 70px;
+}
+
+#Blog {
+    height: 50vh;
 }
 
 .Carosel {
@@ -509,6 +525,12 @@ textarea:focus, textarea:active{
 }
 
 @media (max-width: 1535px) {
+    #AboutUs {
+        min-height: 1300px;
+    }
+    #Blog {
+        min-height: 600px;
+    }
     .AboutText {
         width: 80%;
         margin: 20px;
@@ -521,12 +543,6 @@ textarea:focus, textarea:active{
         width: 50vw;
         margin-left: 0;
         margin-right: 0;
-    }
-}
-
-@media (max-width: 1139px) {
-    #Solutions {
-        min-height: 1500px;
     }
 }
 
@@ -548,6 +564,18 @@ textarea:focus, textarea:active{
     }
 }
 
+@media (max-width: 1019px) {
+    #Blog {
+        min-height: 1200px;
+    }
+}
+
+@media (max-width: 939px) {
+    #Solutions {
+        min-height: 1800px;
+    }
+}
+
 @media (max-width: 850px) {
     .FooterLinks {
         flex-direction: column;
@@ -564,10 +592,16 @@ textarea:focus, textarea:active{
 
 @media (max-width: 779px) {
     #Blog {
-        min-height: 1600px;
+        min-height: 1100px;
     }
     .BlogCard {
         min-height: 350px;
+    }
+}
+
+@media (max-width: 679px) {
+    #Blog {
+        min-height: 1500px;
     }
 }
 
@@ -595,9 +629,15 @@ textarea:focus, textarea:active{
     .LandingText {
         text-align: center;
     }
+    #Solutions {
+        min-height: 1400px;
+    }
+    .FirstTitle {
+        margin-top: 0px;
+    }
     .ProductCard {
         padding: 30px;
-        min-height: 380px;
+        min-height: 400px;
     }
     .PhalanxT {
         width: 166px;
@@ -607,6 +647,9 @@ textarea:focus, textarea:active{
     }
     .Soon {
         font-size: 0.8rem;
+    }
+    #AboutUs {
+        height: 1300px;
     }
     .AboutDescribtion {
         font-size: 1rem;

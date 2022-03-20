@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="black-translucent"  media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../Styles/blogStyle.css"/>
+    <link rel="canonical" href="https://cybernades.com/">
+    <script src="../Scripts/mobileMenu.js"></script>
+    <title>Log4j</title>
+</head>
+<body>
+    <div class="Menu" style="margin-top: -50px;">
+        <div>
+            <a href="https://www.cybernades.com/index.html#Home" style="opacity: 1;">
+                <img class="Logo" src="../Static/CybernadesLogo.png" alt="Cybernades Logo">
+            </a>
+        </div>
+        <div class="Links">
+            <div id="Regular">
+                <a id="homelink" class="NavLink" href="https://www.cybernades.com/index.html#Home">Home</a>
+                <a id="sollink" class="NavLink" href="https://www.cybernades.com/index.html#Solutions">Solutions</a>
+                <a id="aboutlink" class="NavLink" href="https://www.cybernades.com/index.html#AboutUs">About Us</a>
+                <a id="bloglink" class="NavLink" href="https://www.cybernades.com/index.html#Blog"
+                   style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">Blog</a>
+                <a id="contactlink" class="NavLink" href="https://www.cybernades.com/index.html#Contact">Contact</a>
+            </div>
+            <div id="Hidden" style="display: none;">
+                <a id="homelink" class="NavLinkMobile" href="#Home" onclick="showMenu()">Home</a>
+                <a id="sollink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Solutions" onclick="showMenu()">Solutions</a>
+                <a id="aboutlink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#AboutUs" onclick="showMenu()">About Us</a>
+                <a id="bloglink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Blog" 
+                   style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)" onclick="showMenu()">Blog</a>
+                <a id="contactlink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Contact" onclick="showMenu()">Contact</a>
+            </div>
+            <div class="MobileMenu">
+                <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                    <img id="MenuIcon" src="../Static/menuIcon.png" style="width: 25px; opacity: 0.8;"
+                        alt="Menu Icon">
+                    </img>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="BlogHeading" style="background-image: url(../Static/Log4j.png);">
+        <h1>Log4j worldwide vulnerability</h1>
+        <div class="Bar"></div>
+    </div>
+    <div class="BlogTextContainer">
+        <div class="BlogText">
+            <p class="ArticleDate">18.12.2021</p>
+            <h2 class="SubTitle">
+                Last week a critical vulnerability was found in one of the most popularly used logging libraries...<br>
+            </h2>
+        </div>
+        <h3 class="BlogText">
+            <b>What is Log4j?</b><br> 
+            <br>
+            Apache Log4j is a Java-based logging utility developed by the Apache Software Foundation. 
+            Log4j library has a worldwide usage which enables firms to log data and configure 
+            a wide set of applications. The vulnerability which was found lets hackers to inject and run any code
+            on the instances where this Log4j framework is used. <br>
+            <br>
+            MITRE has rated the vulnerability as critical and assigned a CVSS (Common Vulnerability Scoring System )
+            score of 10/10 (<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228"
+                               style="text-decoration: none;
+                                    font-weight: 500;
+                                    color: #0FFEC8;
+                                    text-shadow: 0px 0px 5px #0cf493;
+                                    font-size: large;
+                                    letter-spacing: 0px;
+                                    line-height: 1.2;
+                                    opacity: 1;
+                                    margin: 0px;
+                                    transition: none;"
+            >CVE-2021-44228</a>
+            ).<br>
+            <br>
+            <b>What can happen?</b><br>
+            <br>
+            This vulnerability, also known as Log4Shell, allows remote code execution in many applications through 
+            web requests and without authentication, which enables unlimited access to the information 
+            and operational technology infrastructure. <br>
+            <br>
+            This may result in:
+            <ul>
+                <li>Disruption of companies' operations</li><br>
+                <li>Information theft and takedown of services</li><br>
+                <li>Reputational damage</li><br>
+                <li>Unbearable recovery costs</li><br>
+                <li>Tracking and disclosing the affected user data</li><br>
+            </ul>
+            <br>
+            <b>How to avoid this?</b><br>
+            <br>
+            <ul>
+                <li>Isolate all Log4j usages across the assets and identify any other connections</li><br>
+                <li>Prioritize the most important priorities and work on mitigation strategies</li><br>
+                <li>Modify firewall and put in place suitable rules and prevention mechanisms</li><br>
+                <li>Make a plan for the worst case scenario and allocate extra people to react in case of any attack</li><br>
+            </ul>
+            <br>
+            <b>Conclusion</b><br>
+            <br>
+            It is clear that there will always be new vulnerabilities and nothing can never be 100% secure. 
+            This is a great example that worldwide vulnerabilities still exist which could end with a zero-day.
+            Hopefully now organizations think more about cyber security and will prevent this from happening in the future.<br>
+            <br>
+            <b>Read more</b><br>
+            <br>
+            <a href="https://gca.isa.org/blog/log4j-vulnerability-what-why-and-how"
+                               style="text-decoration: none;
+                                    font-weight: 500;
+                                    color: #0FFEC8;
+                                    text-shadow: 0px 0px 5px #0cf493;
+                                    font-size: large;
+                                    letter-spacing: 0px;
+                                    line-height: 1.2;
+                                    opacity: 1;
+                                    margin: 0px;
+                                    transition: none;"
+            >Global Cybersecurity Alliance</a><br><br>
+            <a href="https://cisomag.eccouncil.org/log4j-explained/"
+                               style="text-decoration: none;
+                                    font-weight: 500;
+                                    color: #0FFEC8;
+                                    text-shadow: 0px 0px 5px #0cf493;
+                                    font-size: large;
+                                    letter-spacing: 0px;
+                                    line-height: 1.2;
+                                    opacity: 1;
+                                    margin: 0px;
+                                    transition: none;"
+            >CISOMAG</a>
+        </h3>
+    </div>
+    <div class="Footer">
+        <div class="FooterLinks">
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Solutions</p>
+                <a class="LinkName" href="https://www.cybernades.com/phalanx.html">Phalanx</a>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#Solutions">Legion</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Legal</p>
+                <a class="LinkName" href="https://www.cybernades.com/privacy.html">Privacy</a>
+                <a class="LinkName" href="https://www.cybernades.com/terms.html">Terms & Conditions</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">About Us</p>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#AboutUs">Our Team</a>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#Contact">Careers</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Social Media</p>
+                <a class="LinkName" href="https://www.linkedin.com">LinkedIn</a>
+                <a class="LinkName" href="https://www.facebook.com">Facebook</a>
+            </div>
+        </div>
+        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
+    </div>
+</body>
+</html>
