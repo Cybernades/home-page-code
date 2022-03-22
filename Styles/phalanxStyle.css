@@ -1,0 +1,57 @@
+.PhalanxContainer {
+    display: flex;
+    align-items: center;
+}
+
+.PhalanxStats {
+    max-height: 800px;
+}
+
+.StatsImg {
+    margin-top: 60px;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+.SafeImg {
+    margin: 50px;
+    width: 40%;
+    max-width: 300px;
+}
+
+.PhalanxContact {
+    max-height: 500px;
+}
+
+.GetDemoDiv {
+    margin-top: 40px;
+}
+
+
+@media (max-width: 1520px) {
+    .PhalanxContainer {
+        flex-direction: column;
+    }
+    .PhalanxMain {
+        min-height: 1500px;
+    }
+    .PhalanxStats {
+        min-height: 1000px;
+    }
+    .PhalanxContact {
+        min-height: 1000px;
+    }
+}
+
+@media (max-width: 500px) {
+    .PhalanxMain {
+        min-height: 1500px;
+    }
+    .PhalanxStats {
+        min-height: 1300px;
+    }
+    .PhalanxContact {
+        min-height: 1200px;
+    }
+}

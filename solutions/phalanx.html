@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="black-translucent"  media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../Styles/phalanxStyle.css"/>
+    <link rel="canonical" href="https://cybernades.com/">
+    <script src="../Scripts/mobileMenu.js"></script>
+    <title>Log4j</title>
+</head>
+<body>
+    <div class="Menu" style="margin-top: -50px;">
+        <div>
+            <a href="https://www.cybernades.com/index.html#Home" style="opacity: 1;">
+                <img class="Logo" src="../Static/CybernadesLogo.png" alt="Cybernades Logo">
+            </a>
+        </div>
+        <div class="Links">
+            <div id="Regular">
+                <a id="homelink" class="NavLink" href="https://www.cybernades.com/index.html#Home">Home</a>
+                <a id="sollink" class="NavLink" href="https://www.cybernades.com/index.html#Solutions"
+                style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)">Solutions</a>
+                <a id="aboutlink" class="NavLink" href="https://www.cybernades.com/index.html#AboutUs">About Us</a>
+                <a id="bloglink" class="NavLink" href="https://www.cybernades.com/index.html#Blog">Blog</a>
+                <a id="contactlink" class="NavLink" href="https://www.cybernades.com/index.html#Contact">Contact</a>
+            </div>
+            <div id="Hidden" style="display: none;">
+                <a id="homelink" class="NavLinkMobile" href="#Home" onclick="showMenu()">Home</a>
+                <a id="sollink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Solutions" 
+                style="opacity: 1; color: #0FFEC8; text-shadow: 0px 1px 5px rgba(20, 253, 200, 0.93)" onclick="showMenu()">Solutions</a>
+                <a id="aboutlink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#AboutUs" onclick="showMenu()">About Us</a>
+                <a id="bloglink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Blog" onclick="showMenu()">Blog</a>
+                <a id="contactlink" class="NavLinkMobile" href="https://www.cybernades.com/index.html#Contact" onclick="showMenu()">Contact</a>
+            </div>
+            <div class="MobileMenu">
+                <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                    <img id="MenuIcon" src="../Static/menuIcon.png" style="width: 25px; opacity: 0.8;"
+                        alt="Menu Icon">
+                    </img>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="Section SectionContainer PhalanxMain" style="margin-bottom: 100px;">
+        <img src="../Static/PhalanxLogo.png" alt="Phalanx Logo"
+             style="max-width: 100px; min-width: 70px; margin-top: 200px;">
+        <img src="../Static/PhalanxTxt.png" alt="Phalanx Text"
+             style="max-width: 366px; min-width: 200px; margin-top: -10px;">
+        <p class="ProductSubTitle">Intrusion Prevention System (IPS)</p>
+        <div class="Bar" style="min-height: 2px; margin-top: 60px;"></div>
+        <div class="PhalanxContainer" style="margin-top: 0px;">
+            <div id="RevealFirst" class="AboutText Reveal">
+                <h3 class="AboutDescribtion">
+                    <b>Phalanx</b> helps to gather the most recent threats and prevent them before the attack. 
+                    See statistics about the most common type of threats and manage your 
+                    own blacklists and whitelists.
+                </h3>
+                <div class="Facts">
+                    <div class="Fact">
+                        <h2>306+</h2>
+                        <b>Threats/week<br>blocked</b>
+                    </div>
+                    <div class="Fact">
+                        <h2>100k+</h2>
+                        <b>IP analysis<br>capacity</b>
+                    </div>
+                    <div class="Fact">
+                        <h2>24TB+</h2>
+                        <b>Data<br>protected</b>
+                    </div>
+                </div>
+            </div>
+            <img id="RevealFirst2" class="AboutImg Reveal" src="../Static/Update.png" alt="About us">
+        </div>
+    </div>
+    <div class="Section SectionContainer PhalanxStats">
+        <h2 class="Reveal">Statistics</h2>
+        <div class="Bar Reveal" style="min-height: 2px;"></div>
+        <div class="PhalanxContainer" style="margin-top: 0px;">
+            <img class="StatsImg Reveal" src="../Static/IpsStats.png" alt="About us">
+            <div class="AboutText Reveal">
+                <h3 class="AboutDescribtion">
+                    <b>Dashboard</b> provides your information security specialists with 
+                    clean and useful statistics about the current data. See how many threats 
+                    are being blocked, how much details have been synced, from which countries 
+                    the attackers are from and much more.
+                </h3>
+                <div class="Facts">
+                    <div class="Fact">
+                        <h2>24hr</h2>
+                        <b>Scan<br>cycle</b>
+                    </div>
+                    <div class="Fact">
+                        <h2>Unlimited</h2>
+                        <b>Lists<br>of addresses</b>
+                    </div>
+                    <div class="Fact">
+                        <h2>1min</h2>
+                        <b>Regular<br>scan time</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section SectionContainer Reveal PhalanxContact" style="margin-bottom: 100px;">
+        <h2 class="Reveal">Prevent.</h2>
+        <div class="Bar Reveal" style="min-height: 2px;"></div>
+        <div class="PhalanxContainer" style="margin-top: 0px;">
+            <div class="AboutText Reveal">
+                <h3 class="AboutDescribtion">
+                    <b>Prevention</b> is the simplest and most cost-effective way of
+                    information security. Phalanx connects to your own firewall and 
+                    provides the crucial data to prevent and protect your business
+                    from dangerous threats and attacks. Send us a quote to fit our solution 
+                    especially for your organisation or company. 
+                </h3>
+                <div class="Facts">
+                    <div class="Fact">
+                        <h2>Get a demo and...</h2>
+                        <b>See the next generation prevention<br>with your own eyes.</b>
+                    </div>
+                </div>
+            </div>
+            <img class="SafeImg" src="../Static/Safe.png" alt="About us">
+        </div>
+        <div class="GetDemoDiv">
+            <a href="https://www.cybernades.com/index.html#Contact" style="opacity: 1; margin: 100px;"><button class="SubmitBtn">Get a demo</button></a>
+        </div>
+    </div>
+    <div class="Footer">
+        <div class="FooterLinks">
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Solutions</p>
+                <a class="LinkName" href="https://www.cybernades.com/phalanx.html">Phalanx</a>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#Solutions">Legion</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Legal</p>
+                <a class="LinkName" href="https://www.cybernades.com/privacy.html">Privacy</a>
+                <a class="LinkName" href="https://www.cybernades.com/terms.html">Terms & Conditions</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">About Us</p>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#AboutUs">Our Team</a>
+                <a class="LinkName" href="https://www.cybernades.com/index.html#Contact">Careers</a>
+            </div>
+            <div class="FooterLinkGroup">
+                <p class="LinkGroupTitle">Social Media</p>
+                <a class="LinkName" href="https://www.linkedin.com">LinkedIn</a>
+                <a class="LinkName" href="https://www.facebook.com">Facebook</a>
+            </div>
+        </div>
+        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
+    </div>
+    <script>
+        let revealF = document.getElementById("RevealFirst");
+        let revealF2 = document.getElementById("RevealFirst2");
+        revealF.style.display = "block";
+        revealF2.style.display = "block";
+        setTimeout(function() {  
+            revealF.classList.add("Active");
+            revealF2.classList.add("Active");
+        }, 300);
+             
+        window.addEventListener("scroll", event => {
+            let reveals = document.querySelectorAll(".Reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("Active");
+                } else {
+                reveals[i].classList.remove("Active");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
