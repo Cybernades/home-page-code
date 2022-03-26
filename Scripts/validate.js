@@ -1,7 +1,8 @@
 function validateForm() {
+    
     let name = document.forms["DemoForm"]["full-name"];
-    let message = document.forms["RegForm"]["message"];
-
+    let message = document.forms["DemoForm"]["message"];
+    console.log(message.value);
     if (name.value.split(" ").length < 2) {
         alert("Please enter your full name.");
         name.focus();
