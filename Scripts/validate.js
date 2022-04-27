@@ -21,7 +21,7 @@ function validateForm() {
         return false;
     }
 
-    const urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+    const urlRegex = /[A-Za-z]+:\/\/[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_:%&;\?\#\/.=]+/g;
     if (message.value.match(urlRegex)) {
         alert("Please do not include links!");
         message.focus();
