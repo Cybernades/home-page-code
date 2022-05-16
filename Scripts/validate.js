@@ -21,9 +21,9 @@ function validateForm() {
         return false;
     }
 
-    const urlRegex = /[A-Za-z]+:\/\/[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_:%&;\?\#\/.=]+/g;
+    urlRegex = /\.([A-Z]|[a-z]|[0-9])+/g;
     if (message.value.match(urlRegex)) {
-        alert("Please do not include links!");
+        alert("Please use space after dot (.)!");
         message.focus();
         return false;
     }
