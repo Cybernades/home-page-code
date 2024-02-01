@@ -156,9 +156,11 @@
                 <a class="LinkName" href="https://www.facebook.com">Facebook</a>
             </div>
         </div>
-        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
+        <p id="Copyright" class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
     </div>
     <script>
+        document.getElementById("Copyright").innerText = "Copyright © "+ (new Date()).getFullYear() +" Cybernades. All rights reserved";
+
         let revealF = document.getElementById("RevealFirst");
         let revealF2 = document.getElementById("RevealFirst2");
         revealF.style.display = "block";
