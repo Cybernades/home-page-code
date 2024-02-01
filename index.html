@@ -204,9 +204,10 @@
                 <a class="LinkName" href="https://www.facebook.com">Facebook</a>
             </div>
         </div>
-        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
+        <p id="Copyright" class="Copyright" ></p>
     </div>
     <script>
+	document.getElementById("Copyright").innerText = "Copyright © "+ (new Date()).getFullYear() +" Cybernades. All rights reserved";
         // Reveal the landing page text and buttons without scrolling
         let revealF = document.getElementById("RevealFirst");
         revealF.style.display = "block";
