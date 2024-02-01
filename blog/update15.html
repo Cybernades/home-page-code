@@ -101,7 +101,10 @@
                 <a class="LinkName" href="https://www.facebook.com">Facebook</a>
             </div>
         </div>
-        <p class="Copyright">Copyright © 2022 Cybernades. All rights reserved</p>
+        <p id="Copyright" class="Copyright"></p>
     </div>
+    <script>
+        document.getElementById("Copyright").innertText = "Copyright © "+ (new Date()).getFullYear() +" Cybernades. All rights reserved"
+    </script>
 </body>
 </html>
